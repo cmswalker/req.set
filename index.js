@@ -1,6 +1,6 @@
 var uniq = require('lodash.uniq');
 
-var DOCS_LINK = 'www.google.com';
+var DOCS_LINK = 'https://github.com/cmswalker/req.set';
 
 var getType = function(val) {
   return Object.prototype.toString.call(val);
@@ -18,13 +18,13 @@ function extend(req) {
 
     switch (arguments.length) {
       case 0:
-        throw new Error('must provide either object or strings to req.set()');
+        throw new Error('must provide either object or strings to req.set() see: ' + DOCS_LINK);
         break;
 
       case 1:
         obj = arguments[0];
         if (!isObjectLiteral(obj)) {
-          throw new Error('Must provide object to req.set() with Arity of 1');
+          throw new Error('Must provide object to req.set() with Arity of 1 see: ' + DOCS_LINK);
         }
         break;
 
@@ -33,7 +33,7 @@ function extend(req) {
         var val = arguments[1];
 
         if (!isString(key)) {
-          throw new Error('Must provide first argument as string (key, value) to req.set() with Arity of 2');
+          throw new Error('Must provide first argument as string (key, value) to req.set() with Arity of 2 see: ' + DOCS_LINK);
         }
 
         obj = {};
