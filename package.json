@@ -9,7 +9,23 @@
     "test": "mocha ./test",
     "prepublish": "npm test"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmswalker/req.set.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cmswalker/req.set/issues"
+  },
+  "keywords": [
+    "req",
+    "set",
+    "req.set",
+    "express",
+    "headers",
+    "express request headers",
+    "set request headers express"
+  ],
+  "author": "cmswalker",
   "license": "MIT",
   "devDependencies": {
     "cookie-parser": "^1.4.3",
