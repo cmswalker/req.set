@@ -1,6 +1,6 @@
 {
   "name": "req.set",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Set request headers like response headers in Express",
   "main": "index.js",
   "scripts": {
