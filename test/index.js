@@ -12,7 +12,7 @@ describe('loading express', function() {
   });
 
   context('Extending Request', function() {
-    // Assertions are found in server/app.js
+    // NOTE: Assertions are found in server/app.js
 
     it('Adds req.set() and ensures backwards compatibilty with req.get()', function testSlash(done) {
       request(server)

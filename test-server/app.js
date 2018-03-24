@@ -36,16 +36,32 @@ app.use((req, res, next) => {
   // object api
   req.set('object', { complex: true });
 
+  // ensure case insensitivity of req.get() keys
   assert.equal(req.get('foo'), 1);
   assert.equal(req.get('Foo'), 1);
 
+  // ensure case insensitivity of req.set() keys via object api
   assert.equal(req.get('bar'), 2);
   assert.equal(req.get('Bar'), 2);
 
+  // ensure case insensitivity of req.set() keys via string api
   assert.equal(req.get('baz'), 100);
   assert.equal(req.get('Baz'), 100);
 
+  // ensure objects are stringified
   assert.equal(req.get('object'), '{"complex":true}');
+
+  // ensure rawHeaders array is updated with header keys
+  const hasIndex = key => req.rawHeaders.includes(key);
+  assert.ok(hasIndex('foo'))
+  assert.ok(hasIndex('bar'));
+  assert.ok(hasIndex('baz'));
+  assert.ok(hasIndex('object'));
+
+  // ensure no dupes
+  assert.ok(!hasIndex('Foo'));
+  assert.ok(!hasIndex('Bar'));
+  assert.ok(!hasIndex('Baz'));
 
   next();
 });

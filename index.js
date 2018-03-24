@@ -1,4 +1,4 @@
-var uniq = require('lodash.uniq');
+var uniq = require('./uniq');
 
 var DOCS_LINK = 'https://github.com/cmswalker/req.set';
 

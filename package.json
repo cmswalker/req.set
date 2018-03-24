@@ -7,7 +7,7 @@
     "generate": "npx express ./server",
     "start": "node ./test-server/bin/www",
     "test": "mocha ./test",
-    "prepublish": "npm test"
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,6 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "lodash.uniq": "^4.5.0"
+
   }
 }

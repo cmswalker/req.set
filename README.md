@@ -1,8 +1,10 @@
 # req.set()
 
-Set request headers like response headers in [Express](https://expressjs.com/)
+## Set request headers like response headers in [Express](https://expressjs.com/)
 
-Compatible with any node version running Express
+### Compatible with any node version running Express
+
+## Usage
 
 ```js
 var reqSet = require('req.set');
@@ -34,7 +36,7 @@ req.set('object', { complex: true });
 req.get('object') // => '{"complex":true}'
 ```
 
-There's also a middleware for one-time application use so each request is extended with .set()
+## There's also a middleware for one-time application use so each request is extended with .set()
 
 ```js
 var reqSet = require('req.set');
