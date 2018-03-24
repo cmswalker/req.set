@@ -82,7 +82,7 @@ function extend(req) {
 }
 
 module.exports = {
-  extend,
+  extend: extend,
   middleware: function (req, res, next) {
     extend(req);
     next();
