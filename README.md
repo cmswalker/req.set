@@ -2,7 +2,7 @@
 
 Set request headers like response headers in [Express](https://expressjs.com/)
 
-Compatbile with any node version running Express
+Compatible with any node version running Express
 
 ```js
 var reqSet = require('req.set');
