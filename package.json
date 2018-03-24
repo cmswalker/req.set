@@ -6,7 +6,8 @@
   "scripts": {
     "generate": "npx express ./server",
     "start": "node ./test-server/bin/www",
-    "test": "mocha ./test"
+    "test": "mocha ./test",
+    "prepublish": "npm test"
   },
   "author": "",
   "license": "MIT",
@@ -20,8 +21,6 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "lodash.uniq": "^4.5.0",
-    "npm-name-cli": "^1.2.0",
-    "validate-npm-package-name": "^3.0.0"
+    "lodash.uniq": "^4.5.0"
   }
 }
